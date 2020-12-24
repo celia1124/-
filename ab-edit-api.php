@@ -1,5 +1,5 @@
 <?php
-require __DIR__. '/is_admin.php';
+// require __DIR__. '/is_admin.php';
 require __DIR__. '/db_connect.php';
 
 
@@ -9,14 +9,14 @@ $output = [
     'error' => '參數不足',
 ];
 
-if(!isset($_POST['name']) or !isset($_POST['name']) or !isset($_POST['orderid'])){
+if(!isset($_POST['sid']) or !isset($_POST['name']) or !isset($_POST['orderid'])){
     echo json_encode($output, JSON_UNESCAPED_UNICODE);
     exit;
 }
 
 
 
-$sql="UPDATE `custo_order` SET `name`=?,`banana`=?,`strawberry`=?,`blueberry`=?,`productid`=?,`saleid`=? WHERE `sid`=?";
+$sql="UPDATE `custo_order` SET `name`=?,`banana`=?,`strawberry`=?,`blueberry`=?,`productid`=?,`saleid`=? WHERE `sid`= ?";
 
 $stmt = $pdo->prepare($sql);
 

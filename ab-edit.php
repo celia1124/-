@@ -9,12 +9,14 @@ if(! isset($_GET['sid'])){
 }
 $sid = intval($_GET['sid']);
 
+$row = $pdo
+->query("SELECT * FROM custo_order WHERE sid=$sid")
+->fetch();
 
-
-if(empty($row)){
-    header('Location: db_list.php');
-    exit;
-}
+// if(empty($row)){
+//     header('Location: db_list.php');
+//     exit;
+// }
 
 ?>
 <?php include __DIR__. '/parts/head.php';?>

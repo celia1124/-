@@ -63,7 +63,7 @@ body{
   background-color:#F7D7F7;
 }
 
-.page-link{
+ .page-link{
 
 background-color:#F01BF0;
 color:black;
