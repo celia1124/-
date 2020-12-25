@@ -49,7 +49,7 @@ body{
 
                     <img alt="" id="preview"
                          onclick="avatar.click()" src="./uploads/<?= $_SESSION['admin']['avatar'] ?>"
-                         style="width: 300px; border-radius:180px; background-color: #ccc;">
+                         style="width: 300px;  background-color: #ccc;">
 
 
                     <form name="form1" novalidate onsubmit="checkForm(); return false;">
